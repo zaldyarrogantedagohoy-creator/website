@@ -1,0 +1,255 @@
+.contact {
+  padding: 90px 6% 110px;
+  background: #030d0a;
+  color: #e9f5e7;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before,
+.contact::after {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: rgba(0, 255, 136, 0.16);
+}
+
+.contact::before {
+  top: 12px;
+  transform: rotate(-1deg);
+}
+
+.contact::after {
+  bottom: 18px;
+  transform: rotate(-1deg);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.contact-header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-header h2 span {
+  color: rgba(160, 220, 175, 0.6);
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.contact-header h2 b {
+  color: #f5f8ef;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.contact-header h2 b::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #00ff88;
+  margin-top: 10px;
+}
+
+.contact-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  background:
+    linear-gradient(180deg, rgba(10, 20, 30, 0.88), rgba(3, 13, 10, 0.96));
+  padding: 55px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 70px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info h3 {
+  color: #f5f8ef;
+  font-family: "Courier New", monospace;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.contact-info p {
+  max-width: 420px;
+  margin: 0 auto 34px;
+  color: rgba(160, 220, 175, 0.58);
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.email-box {
+  width: fit-content;
+  margin: 0 auto 55px;
+  border: 1px solid rgba(0, 255, 136, 0.22);
+  color: #e9f5e7;
+  padding: 18px 28px;
+  display: block;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.email-box:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.location {
+  text-align: left;
+  color: rgba(160, 220, 175, 0.58);
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  margin-bottom: 26px;
+}
+
+.contact-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 38px;
+}
+
+.contact-tabs a {
+  min-width: 120px;
+  border-left: 1px solid #00ff88;
+  border-right: 1px solid #00ff88;
+  color: rgba(160, 220, 175, 0.58);
+  padding: 12px 18px;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.contact-tabs a:hover {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  color: rgba(160, 220, 175, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #00ff88;
+  border-color: #00ff88;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 255, 136, 0.22);
+  background: rgba(8, 18, 22, 0.85);
+  color: #e9f5e7;
+  padding: 18px 22px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form input {
+  height: 58px;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(160, 220, 175, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.08);
+}
+
+.contact-form button {
+  height: 50px;
+  border: 1px solid #00ff88;
+  background: transparent;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.form-note {
+  color: rgba(160, 220, 175, 0.55);
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
+@media (max-width: 950px) {
+  .contact-header h2 {
+    flex-direction: column;
+  }
+
+  .contact-header h2 b {
+    font-size: 34px;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .contact-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .location {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

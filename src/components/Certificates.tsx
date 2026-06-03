@@ -1,37 +1,35 @@
 import { useState } from "react";
 import "../styles/Certificates.css";
 
-interface Certificate {
+import cert1 from "../assets/certificates/certificate-1.png";
+import cert2 from "../assets/certificates/certificate-2.png";
+import cert3 from "../assets/certificates/certificate-3.png";
+
+type Certificate = {
   id: number;
-  title: string;
-  issuer: string;
-  year: string;
-}
+  image: string;
+  className: string;
+  label: string;
+};
 
 const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Web Development Certification",
-    issuer: "Tech Academy",
-    year: "2025",
+    image: cert1,
+    className: "cert-one",
+    label: "CERTIFIED",
   },
   {
     id: 2,
-    title: "React & TypeScript",
-    issuer: "Udemy",
-    year: "2025",
+    image: cert2,
+    className: "cert-two",
+    label: "VERIFIED",
   },
   {
     id: 3,
-    title: "UI/UX Design",
-    issuer: "Coursera",
-    year: "2024",
-  },
-  {
-    id: 4,
-    title: "Database Management",
-    issuer: "Google",
-    year: "2024",
+    image: cert3,
+    className: "cert-three",
+    label: "ACHIEVED",
   },
 ];
 
@@ -40,62 +38,36 @@ function Certificates() {
 
   return (
     <section id="certificates" className="certificates">
-      <div className="section-header">
-        <span className="section-tag">ACHIEVEMENTS</span>
-        <h2>Certificates</h2>
+      <div className="cert-header">
+        <h2>
+          <span>$ ⌘ VERIFIED_CREDENTIALS</span>
+          <b>// certificates</b>
+        </h2>
+
+        <p>// Click any certificate to view it full-screen.</p>
       </div>
 
-      <div className="certificate-grid">
+      <div className="cert-wall">
         {certificates.map((cert) => (
-          <div
+          <button
             key={cert.id}
-            className="certificate-card"
+            className={`cert-card ${cert.className}`}
             onClick={() => setSelected(cert)}
           >
-            <div className="certificate-icon">🏆</div>
-
-            <h3>{cert.title}</h3>
-
-            <p>{cert.issuer}</p>
-
-            <span>{cert.year}</span>
-          </div>
+            <img src={cert.image} alt={`Certificate ${cert.id}`} />
+            <span className="cert-label">{cert.label}</span>
+          </button>
         ))}
       </div>
 
       {selected && (
-        <div
-          className="certificate-modal"
-          onClick={() => setSelected(null)}
-        >
-          <div
-            className="certificate-preview"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="preview-header">
-              <h2>{selected.title}</h2>
+        <div className="cert-modal" onClick={() => setSelected(null)}>
+          <div className="cert-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="cert-close" onClick={() => setSelected(null)}>
+              ✕
+            </button>
 
-              <button onClick={() => setSelected(null)}>
-                ✕
-              </button>
-            </div>
-
-            <div className="certificate-paper">
-              <h1>CERTIFICATE</h1>
-
-              <p>This certifies that</p>
-
-              <h3>Zaldy Dagohoy</h3>
-
-              <p>has successfully completed</p>
-
-              <h2>{selected.title}</h2>
-
-              <div className="certificate-footer">
-                <span>{selected.issuer}</span>
-                <span>{selected.year}</span>
-              </div>
-            </div>
+            <img src={selected.image} alt="Selected certificate" />
           </div>
         </div>
       )}

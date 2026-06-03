@@ -1,0 +1,151 @@
+.testimonials {
+  padding: 90px 6% 110px;
+  background: #030d0a;
+  color: #e9f5e7;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before,
+.testimonials::after {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: rgba(0, 255, 136, 0.16);
+}
+
+.testimonials::before {
+  top: 12px;
+  transform: rotate(-1deg);
+}
+
+.testimonials::after {
+  bottom: 16px;
+  transform: rotate(-1deg);
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.testimonials-header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonials-header h2 span {
+  color: rgba(160, 220, 175, 0.6);
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.testimonials-header h2 b {
+  color: #f5f8ef;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.testimonials-header h2 b::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #00ff88;
+  margin-top: 10px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.testimonial-card {
+  min-height: 320px;
+  border: 1px solid rgba(0, 255, 136, 0.22);
+  background:
+    linear-gradient(180deg, rgba(12, 22, 32, 0.92), rgba(4, 14, 11, 0.96));
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-mark {
+  color: rgba(0, 255, 136, 0.42);
+  font-size: 38px;
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.testimonial-message {
+  max-width: 290px;
+  color: rgba(160, 220, 175, 0.62);
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  margin-bottom: 22px;
+}
+
+.person-avatar {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #00ff88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.person h3 {
+  color: #f5f8ef;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.person span {
+  color: rgba(160, 220, 175, 0.5);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+
+.stars {
+  color: #ffb000;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 950px) {
+  .testimonials-header h2 {
+    flex-direction: column;
+  }
+
+  .testimonials-header h2 b {
+    font-size: 34px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
