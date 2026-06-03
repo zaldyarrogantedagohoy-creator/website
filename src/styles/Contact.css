@@ -253,3 +253,26 @@
     justify-content: center;
   }
 }
+@media (max-width: 650px) {
+  .contact {
+    padding: 70px 4% 90px;
+  }
+
+  .contact-header h2 {
+    gap: 10px;
+  }
+
+  .contact-box {
+    padding: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+  }
+
+  .contact-form textarea {
+    min-height: 160px;
+  }
+}

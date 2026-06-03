@@ -375,3 +375,35 @@
     display: none;
   }
 }
+@media (max-width: 650px) {
+  .projects {
+    padding: 70px 4% 90px;
+  }
+
+  .projects-header h2 {
+    gap: 12px;
+  }
+
+  .project-grid {
+    gap: 20px;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .workflow-box {
+    padding: 40px 28px 32px;
+  }
+}

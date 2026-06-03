@@ -149,3 +149,21 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 650px) {
+  .testimonials {
+    padding: 70px 4% 90px;
+  }
+
+  .testimonials-header h2 {
+    gap: 10px;
+  }
+
+  .testimonial-card {
+    padding: 26px;
+  }
+
+  .testimonial-message {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}

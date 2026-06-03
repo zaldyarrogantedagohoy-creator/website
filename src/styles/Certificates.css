@@ -228,3 +228,22 @@
     font-size: 36px;
   }
 }
+@media (max-width: 650px) {
+  .cert-wall {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .cert-card {
+    aspect-ratio: auto;
+    padding: 22px;
+  }
+
+  .cert-header h2 {
+    gap: 10px;
+  }
+
+  .cert-header h2 b {
+    font-size: 30px;
+  }
+}

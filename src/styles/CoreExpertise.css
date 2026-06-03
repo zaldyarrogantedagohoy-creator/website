@@ -320,3 +320,24 @@
     margin: auto;
   }
 }
+@media (max-width: 650px) {
+  .expertise {
+    padding: 75px 4% 90px;
+  }
+
+  .expertise-header h2 {
+    gap: 10px;
+  }
+
+  .skill-panel {
+    padding: 28px 22px;
+  }
+
+  .skill-row {
+    grid-template-columns: 28px 1fr 1fr;
+  }
+
+  .skill-row strong {
+    font-size: 11px;
+  }
+}

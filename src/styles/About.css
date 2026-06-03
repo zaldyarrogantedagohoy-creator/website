@@ -218,6 +218,33 @@
   }
 }
 
+@media (max-width: 650px) {
+  .about {
+    padding: 70px 5% 90px;
+  }
+
+  .about h2 {
+    font-size: 36px;
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .about-skills {
+    gap: 10px;
+  }
+
+  .about-skills span {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .profile-card {
+    padding: 28px 22px;
+  }
+}
+
 @media (max-width: 768px) {
   .about h2 {
     font-size: 38px;

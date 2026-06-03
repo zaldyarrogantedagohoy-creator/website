@@ -4,8 +4,17 @@
   grid-template-columns: 48% 52%;
   align-items: center;
   padding: 20px 7% 0;
-  background: #030d0a;
+  background: transparent;
   overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.08), transparent 18%), radial-gradient(circle at 90% 15%, rgba(0, 255, 136, 0.04), transparent 14%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-left {
@@ -21,7 +30,8 @@
   height: auto;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 0 22px rgba(0, 255, 136, 0.16));
+  filter: drop-shadow(0 0 28px rgba(0, 255, 136, 0.16));
+  border-radius: 24px;
 }
 
 .name-tag {
@@ -30,12 +40,13 @@
   bottom: 88px;
   border: 1px solid rgba(0, 255, 136, 0.55);
   color: #00ff88;
-  background: rgba(3, 13, 10, 0.8);
+  background: rgba(3, 13, 10, 0.88);
   padding: 12px 18px;
   font-family: "Courier New", monospace;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.8px;
+  border-radius: 12px;
 }
 
 .hero-right {
@@ -44,6 +55,12 @@
   align-items: center;
   justify-content: center;
   transform: translateY(-25px);
+  padding: 42px 34px;
+  border: 1px solid rgba(0, 255, 136, 0.12);
+  border-radius: 30px;
+  background: rgba(3, 13, 10, 0.86);
+  box-shadow: 0 40px 80px rgba(0, 255, 136, 0.08);
+  position: relative;
 }
 
 .hero-dots {
@@ -55,15 +72,16 @@
 }
 
 .role-badge {
-  border: 1px solid rgba(0, 255, 136, 0.18);
+  border: 1px solid rgba(0, 255, 136, 0.22);
   background: rgba(0, 255, 136, 0.04);
   color: #00ff88;
-  padding: 8px 18px;
+  padding: 10px 20px;
   font-family: "Courier New", monospace;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: 1.6px;
   margin-bottom: 34px;
+  border-radius: 999px;
 }
 
 .hero-title {
@@ -85,12 +103,14 @@
 .hero-description {
   max-width: 520px;
   text-align: center;
-  color: rgba(190, 240, 205, 0.42);
+  color: rgba(190, 240, 205, 0.62);
   font-family: "Courier New", monospace;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.9;
   margin: 0 0 34px;
+  border-left: 3px solid rgba(0, 255, 136, 0.22);
+  padding-left: 18px;
 }
 
 .hero-buttons {
@@ -101,34 +121,35 @@
 
 .primary-btn,
 .secondary-btn {
-  height: 42px;
-  min-width: 150px;
-  padding: 0 22px;
+  height: 44px;
+  min-width: 160px;
+  padding: 0 24px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-family: "Courier New", monospace;
   font-size: 12px;
   font-weight: 900;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   text-decoration: none;
+  border-radius: 999px;
 }
 
 .primary-btn {
   border: 1px solid #00ff88;
   color: #00ff88;
-  background: rgba(0, 255, 136, 0.03);
+  background: rgba(0, 255, 136, 0.1);
 }
 
 .secondary-btn {
   border: 1px solid rgba(0, 255, 136, 0.25);
-  color: rgba(190, 240, 205, 0.5);
-  background: transparent;
+  color: rgba(190, 240, 205, 0.72);
+  background: rgba(0, 255, 136, 0.04);
 }
 
 .primary-btn:hover,
 .secondary-btn:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(0, 255, 136, 0.16);
   color: #00ff88;
 }
 
@@ -137,12 +158,10 @@
   margin: 0 auto 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid rgba(0, 255, 136, 0.25);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 255, 136, 0.035),
-    rgba(0, 255, 136, 0.015)
-  );
+  border: 1px solid rgba(0, 255, 136, 0.14);
+  background: rgba(0, 255, 136, 0.03);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
 }
 
 .hero-stat-box {
@@ -222,3 +241,81 @@
     font-size: 44px;
   }
 }
+@media (max-width: 650px) {
+  .hero {
+    padding: 25px 5% 0;
+  }
+  .hero-left {
+    min-height: 320px;
+  }
+  .hero-photo {
+    width: min(90%, 280px);
+  }
+  .name-tag {
+    bottom: 18px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  .hero-description {
+    font-size: 13px;
+    padding-left: 12px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+  .hero-stats {
+    width: calc(100% - 20px);
+    grid-template-columns: 1fr;
+  }
+  .hero-stat-box {
+    padding: 28px 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 28px 4% 0;
+  }
+
+  .hero-left {
+    min-height: 320px;
+  }
+
+  .hero-photo {
+    width: min(80%, 280px);
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-stats {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stat-box {
+    padding: 24px 14px;
+  }
+
+  .hero-stat-box:not(:last-child)::after {
+    display: none;
+  }
+}
+

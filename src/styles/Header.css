@@ -116,3 +116,31 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 600px) {
+  .header {
+    padding: 16px 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .header-nav {
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .header-nav a {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .available-badge,
+  .contact-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
