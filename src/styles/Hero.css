@@ -1,0 +1,224 @@
+.hero {
+  min-height: calc(100vh - 78px);
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: center;
+  padding: 20px 7% 0;
+  background: #030d0a;
+  overflow: hidden;
+}
+
+.hero-left {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-photo {
+  width: min(82%, 520px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 22px rgba(0, 255, 136, 0.16));
+}
+
+.name-tag {
+  position: absolute;
+  left: 10px;
+  bottom: 88px;
+  border: 1px solid rgba(0, 255, 136, 0.55);
+  color: #00ff88;
+  background: rgba(3, 13, 10, 0.8);
+  padding: 12px 18px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-25px);
+}
+
+.hero-dots {
+  color: rgba(190, 240, 205, 0.55);
+  font-family: "Courier New", monospace;
+  letter-spacing: 14px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.role-badge {
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  background: rgba(0, 255, 136, 0.04);
+  color: #00ff88;
+  padding: 8px 18px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  margin-bottom: 34px;
+}
+
+.hero-title {
+  color: #f2f7e8;
+  font-size: clamp(52px, 5.3vw, 88px);
+  line-height: 0.95;
+  font-weight: 950;
+  text-align: center;
+  margin: 0 0 28px;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+}
+
+.hero-title span {
+  color: #00ff88;
+  text-shadow: 0 0 16px rgba(0, 255, 136, 0.65);
+}
+
+.hero-description {
+  max-width: 520px;
+  text-align: center;
+  color: rgba(190, 240, 205, 0.42);
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.9;
+  margin: 0 0 34px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+  height: 42px;
+  min-width: 150px;
+  padding: 0 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+}
+
+.primary-btn {
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.03);
+}
+
+.secondary-btn {
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  color: rgba(190, 240, 205, 0.5);
+  background: transparent;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+}
+
+.hero-stats {
+  width: calc(100% - 64px);
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 136, 0.035),
+    rgba(0, 255, 136, 0.015)
+  );
+}
+
+.hero-stat-box {
+  text-align: center;
+  padding: 36px 20px;
+  position: relative;
+}
+
+.hero-stat-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 32%;
+  width: 1px;
+  height: 38%;
+  background: rgba(0, 255, 136, 0.2);
+}
+
+.hero-stat-box h2 {
+  color: #00ff88;
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 14px;
+  text-shadow: 0 0 14px rgba(0, 255, 136, 0.4);
+}
+
+.hero-stat-box h2 span {
+  font-size: 22px;
+  vertical-align: super;
+}
+
+.hero-stat-box p {
+  color: rgba(190, 240, 205, 0.55);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 35px 6% 0;
+  }
+
+  .hero-left {
+    min-height: 420px;
+  }
+
+  .hero-photo {
+    width: min(70%, 360px);
+  }
+
+  .name-tag {
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .hero-right {
+    transform: none;
+    padding: 40px 0;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-stats {
+    width: calc(100% - 32px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stat-box h2 {
+    font-size: 44px;
+  }
+}

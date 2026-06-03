@@ -1,0 +1,234 @@
+.about {
+  min-height: 100vh;
+  padding: 90px 6% 110px;
+  background: #030d0a;
+  color: #e9f5e7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative lines top and bottom */
+
+.about::before,
+.about::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  height: 1px;
+  background: rgba(0, 255, 136, 0.18);
+}
+
+.about::before {
+  top: 12px;
+  transform: rotate(-1deg);
+}
+
+.about::after {
+  bottom: 18px;
+  transform: rotate(-1deg);
+}
+
+/* Title */
+
+.about h2 {
+  text-align: center;
+  font-size: 52px;
+  font-weight: 900;
+  color: #f5f8ef;
+  margin-bottom: 70px;
+  letter-spacing: -1px;
+}
+
+.about h2 span {
+  color: rgba(170, 220, 185, 0.45);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 230px;
+  height: 1px;
+  background: rgba(0, 255, 136, 0.4);
+  margin: 12px auto 0;
+}
+
+/* Layout */
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left Side */
+
+.about-left {
+  text-align: center;
+}
+
+.about-left p {
+  font-family: "Courier New", monospace;
+  color: rgba(235, 245, 235, 0.8);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 35px;
+}
+
+/* Skills */
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.about-skills span {
+  border: 1px solid rgba(0, 255, 136, 0.22);
+  background: rgba(0, 255, 136, 0.03);
+  color: rgba(170, 220, 185, 0.75);
+
+  padding: 12px 18px;
+
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.about-skills span:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  transform: translateY(-2px);
+}
+
+/* Profile Card */
+
+.profile-card {
+  border: 1px solid rgba(0, 255, 136, 0.35);
+
+  background: rgba(7, 18, 13, 0.95);
+
+  padding: 35px 30px;
+
+  text-align: center;
+}
+
+.profile-logo {
+  width: 100px;
+  height: 100px;
+
+  border: 2px solid #00ff88;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #00ff88;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  font-family: "Courier New", monospace;
+}
+
+.profile-card h3 {
+  color: #f5f8ef;
+  font-size: 20px;
+  margin-bottom: 18px;
+  font-family: "Courier New", monospace;
+}
+
+.profile-card h4 {
+  color: #00ff88;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 28px;
+
+  font-family: "Courier New", monospace;
+}
+
+.profile-card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.profile-card li {
+  color: rgba(170, 220, 185, 0.65);
+
+  margin-bottom: 18px;
+
+  font-size: 14px;
+
+  font-family: "Courier New", monospace;
+}
+
+.profile-card a {
+  height: 48px;
+
+  border: 1px solid #00ff88;
+
+  color: #00ff88;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.profile-card a:hover {
+  background: rgba(0, 255, 136, 0.08);
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .profile-card {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 38px;
+  }
+
+  .about-left p {
+    font-size: 16px;
+  }
+
+  .about-skills span {
+    width: 100%;
+    text-align: center;
+  }
+}

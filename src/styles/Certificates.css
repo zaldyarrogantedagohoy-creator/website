@@ -1,0 +1,160 @@
+.certificates {
+  padding: 100px 8%;
+  background: #030d0a;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-tag {
+  color: #00ff88;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  margin-top: 10px;
+  color: white;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.certificate-card {
+  background: rgba(0, 255, 136, 0.04);
+  border: 1px solid rgba(0, 255, 136, 0.15);
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  border-color: #00ff88;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.15);
+}
+
+.certificate-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  color: rgba(255,255,255,.7);
+}
+
+.certificate-card span {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00ff88;
+}
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.certificate-preview {
+  width: 850px;
+  max-width: 95%;
+  animation: popup 0.3s ease;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.preview-header h2 {
+  color: white;
+}
+
+.preview-header button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #00ff88;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.certificate-paper {
+  background: white;
+  color: black;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.certificate-paper h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.certificate-paper h2 {
+  color: #00aa55;
+  margin: 20px 0;
+}
+
+.certificate-paper h3 {
+  margin: 20px 0;
+  font-size: 28px;
+}
+
+.certificate-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media(max-width:768px) {
+  .certificate-paper {
+    padding: 30px;
+  }
+
+  .certificate-paper h1 {
+    font-size: 32px;
+  }
+
+  .certificate-paper h2 {
+    font-size: 22px;
+  }
+
+  .certificate-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

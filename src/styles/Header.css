@@ -1,0 +1,118 @@
+.header {
+  width: 100%;
+  height: 78px;
+  padding: 0 36px;
+  background: #030d0a;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.08);
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.55));
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 62px;
+}
+
+.header-nav a {
+  color: rgba(141, 196, 154, 0.55);
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: 0.25s ease;
+}
+
+.header-nav a:hover {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.7);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.available-badge,
+.contact-btn {
+  height: 31px;
+  border: 1px solid rgba(0, 255, 136, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.available-badge {
+  color: #00ff88;
+  padding: 0 14px;
+  gap: 8px;
+}
+
+.available-badge span {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.contact-btn {
+  color: rgba(190, 240, 205, 0.55);
+  text-decoration: none;
+  padding: 0 24px;
+  transition: 0.25s ease;
+}
+
+.contact-btn:hover {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.08);
+}
+
+@media (max-width: 850px) {
+  .header {
+    height: auto;
+    min-height: 78px;
+    padding: 16px 24px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .header-logo {
+    margin: auto;
+  }
+
+  .header-nav {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
